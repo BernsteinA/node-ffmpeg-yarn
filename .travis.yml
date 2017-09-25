@@ -6,4 +6,4 @@ services:
   - docker
 
 script:
-  - docker build -t BernsteinA/node-ffmpeg-yarn .
+  - docker build -t bernsteina/node-ffmpeg-yarn .
