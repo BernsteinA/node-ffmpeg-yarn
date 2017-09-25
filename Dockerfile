@@ -11,4 +11,4 @@ RUN rm -rf /var/cache/apk/*
 
 RUN curl -o- -L https://yarnpkg.com/install.sh | bash
 
-RUN apk del git curl tar binutils
+RUN apk del curl tar binutils
