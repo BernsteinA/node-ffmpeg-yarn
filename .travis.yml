@@ -1,9 +1,0 @@
-sudo: required
-
-language: ruby
-
-services:
-  - docker
-
-script:
-  - docker build -t bernsteina/node-ffmpeg-yarn .
