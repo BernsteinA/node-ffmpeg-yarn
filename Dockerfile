@@ -1,11 +1,14 @@
 FROM node:6-alpine
 
-RUN apk update && apk add ffmpeg && rm -rf /var/cache/apk/*
+RUN apk update
+RUN apk add ffmpeg
+RUN apk add curl
+RUN apk add bash
+RUN apk add binutils
+RUN apk add tar
 
-RUN apk update \
-  && apk add curl bash binutils tar \
-  && rm -rf /var/cache/apk/* \
-  && /bin/bash \
-  && touch ~/.bashrc \
-  && curl -o- -L https://yarnpkg.com/install.sh | bash \
-  && apk del git curl tar binutils
+RUN rm -rf /var/cache/apk/*
+
+RUN curl -o- -L https://yarnpkg.com/install.sh | bash
+
+RUN apk del git curl tar binutils
