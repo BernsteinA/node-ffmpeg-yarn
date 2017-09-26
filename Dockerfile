@@ -22,3 +22,6 @@ RUN mkdir -p /usr/src/optipng /source \
 RUN apk del tar wget
 
 RUN rm -rf /var/cache/apk/*
+
+RUN npm install -g optipng-bin
+RUN ln -fs $(which optipng) /usr/local/lib/node_modules/optipng-bin/vendor/optipng
