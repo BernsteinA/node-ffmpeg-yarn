@@ -23,6 +23,7 @@ RUN apk del tar wget
 
 RUN rm -rf /var/cache/apk/*
 
-RUN npm install -g optipng-bin
-
+RUN npm install -g optipng-bin --ignore-scripts
+RUN mkdir -p /usr/local/lib/node_modules/optipng-bin/vendor
 RUN ln -fs /usr/local/bin/optipng /usr/local/lib/node_modules/optipng-bin/vendor/optipng
+RUN npm install -g imagemin-optipng
