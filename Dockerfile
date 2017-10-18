@@ -10,3 +10,6 @@ RUN apk add git
 RUN apk add libpng-dev autoconf automake make g++ libtool nasm
 
 RUN rm -rf /var/cache/apk/*
+
+# https://github.com/Level/leveldown/issues/388
+RUN npm install -g --build-from-source leveldown
